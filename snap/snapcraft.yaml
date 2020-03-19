@@ -1,0 +1,19 @@
+name: lapin
+version: master
+summary: lapin
+base: core18
+description: |
+  A game I built under direction of my kids
+  Move a rabbit trying to reach grass withhout being eaten or fired at.
+
+confinement: strict
+
+parts:
+  lapin:
+    source: https://github.com/Canop/lapin.git
+    plugin: rust
+
+apps:
+  lapin:
+    command: lapin
+
