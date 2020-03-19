@@ -1,5 +1,5 @@
 name: lapin
-version: master
+adopt-info: lapin
 summary: lapin
 base: core18
 description: |
@@ -12,6 +12,9 @@ parts:
   lapin:
     source: https://github.com/Canop/lapin.git
     plugin: rust
+    override-pull: |
+      snapcraftctl pull
+      snapcraftctl set-version "$(git rev-parse --short HEAD)"
 
 apps:
   lapin:
